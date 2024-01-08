@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.css">
 
     {{#is "home"}}
         {{#if @site.cover_image}}
@@ -116,6 +117,22 @@
 
 <script src="{{asset "built/main.min.js"}}"></script>
 <script src="{{asset "js/scrolltop.js"}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.min.js"></script>
+{{! Initialize Tocbot after you load the script }}
+<script>
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.gh-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.gh-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3, h4',
+        // Headings that match the ignoreSelector will be skipped.
+        ignoreSelector: '.gh-author-name',
+        // Ensure correct positioning
+        hasInnerContainers: true,
+    });
+</script>
 
 {{ghost_foot}}
 
