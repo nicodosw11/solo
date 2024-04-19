@@ -1,6 +1,7 @@
 {{!< default}}
 
 {{#contentFor "lang"}}{{@site.lang}}{{/contentFor}}
+{{#contentFor "pub-tag"}}Powered by Ghost{{/contentFor}}
 
 <section class="gh-about gh-outer{{#match @custom.header_section_layout "!=" "Typographic profile"}}{{#unless @site.cover_image}} no-image{{/unless}}{{else}}{{#unless @site.icon}} no-image{{/unless}}{{/match}}">
     <div class="gh-about-inner gh-inner">

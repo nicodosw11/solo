@@ -99,7 +99,7 @@
 
             <div class="gh-copyright">
                 {{#unless @custom.footer_text}}
-                    {{@site.title}} © {{date format="YYYY"}}. Powered by <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+                    {{@site.title}} © {{date format="YYYY"}}. <a href="https://ghost.org/" target="_blank" rel="noopener">{{{block "pub-tag"}}}</a>
                 {{else}}
                     {{@custom.footer_text}}
                 {{/unless}}
