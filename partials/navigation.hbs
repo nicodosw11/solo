@@ -1,0 +1,12 @@
+{{#if isSecondary}}
+  {{! Template for secondary navigation }}
+{{else}}
+  {{! Template for primary navigation }}
+<ul class="nav">
+    {{#foreach navigation}}
+    <li class="{{link_class for=(url) class=(concat "nav-" slug)}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+    <li class="nav-startseite"><a href="https://nicolasdotto.com/de/">🇩🇪</a></li>
+    <li class="nav-start"><a href="https://nicolasdotto.com/">🇬🇧</a></li>
+</ul>
+{{/if}}
